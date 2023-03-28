@@ -1,0 +1,20 @@
+<h1 id="title"> Noal's Survey</h1>
+<p id="description">Noal's survey for freecodecamp certification</p>
+<form id="survey-form">
+  <label id="name-label">Enter your first and last name</label>
+  <input id="name" type="text" required placeholder="name">
+  <label id="email-label">Enter your email</label>
+  <input id="email" type="email" required placeholder="email">
+  <label id="number-label">Enter your age</label>
+  <input id="number" type="number" min="1" max="300" placeholder="2">
+ <select id="dropdown">
+   <option></option>
+   <option></option>
+   <input type="radio" value="Personal account" name="account type">
+   <input type="radio" value="Business account" name="account type">
+   <input type="radio" value="Yes" name="newsletter">
+   <input type="radio" value="No" name="newsletter">
+   <input type="checkbox" value="Volunteer">
+   <input type="checkbox" value="Donate">
+   <textarea></textarea>
+   <input id="submit" type="submit">
