@@ -1,20 +1,261 @@
-<h1 id="title"> Noal's Survey</h1>
-<p id="description">Noal's survey for freecodecamp certification</p>
-<form id="survey-form">
-  <label id="name-label">Enter your first and last name</label>
-  <input id="name" type="text" required placeholder="name">
-  <label id="email-label">Enter your email</label>
-  <input id="email" type="email" required placeholder="email">
-  <label id="number-label">Enter your age</label>
-  <input id="number" type="number" min="1" max="300" placeholder="2">
- <select id="dropdown">
-   <option></option>
-   <option></option>
-   <input type="radio" value="Personal account" name="account type">
-   <input type="radio" value="Business account" name="account type">
-   <input type="radio" value="Yes" name="newsletter">
-   <input type="radio" value="No" name="newsletter">
-   <input type="checkbox" value="Volunteer">
-   <input type="checkbox" value="Donate">
-   <textarea></textarea>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css" />
+    <style>body {
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      background-color: #ffffff;
+      color: #000000;
+      font-family: Tahoma;
+      font-size: 16px;
+    }
+    
+    h1, p {
+      margin: 1em auto;
+      text-align: left;
+    }
+    
+    form {
+      width: 60vw;
+      max-width: 500px;
+      min-width: 300px;
+      margin: 0 auto;
+      padding-bottom: 2em;
+    }
+    
+    fieldset {
+      border: none;
+      padding: 1rem 0;
+      border-bottom: 3px solid #ffffff;
+    }
+    
+    fieldset:last-of-type {
+      border-bottom: none;
+    }
+    
+    label {
+      display: block;
+      margin: 0.5rem 0;
+    }
+    
+    textarea,
+    select {
+      margin: 10px 0 0 0;
+      width: 100%;
+      min-height: 2em;
+    }
+    input
+     {
+      margin: -8px 0 0 0;
+      width: 100%;
+      min-height: 1em;
+    }
+    .help{
+      font-size: 12px;
+      margin: 1em auto;
+      font-style:italic;
+    }
+    .inline {
+      width: unset;
+      margin: 0 2em 0 0;
+      vertical-align: left;
+    }
+    input[type="radio"],
+    input.radio {
+      width: 20px;
+      float: left;
+      margin: 2px 0 0 2px;
+    }
+    input[type="submit"] {
+      display: block;
+      width: 40%;
+      margin: 1em auto;
+      height: 2em;
+      font-size: 1.1rem;
+      background-color: #ffffff;
+      border-color: 000000;
+      min-width: 200px;
+    }
+    
+    input[type="file"] {
+      padding: 1px 2px;
+    }
+    table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+      }
+    th, td {
+      padding: 15px;
+    }
+    td {
+      font-size: 8px;
+      font-style: italic;
+    }
+    #contact input {
+      margin: -8px 0 0 0;
+      width: 30%;
+      min-height: 1em;}
+    </style>
+    
+  </head>
+  <body>
+<img src="https://www.iprfund.ca/IPRF-logo-EN-_RGB-1-1.png" width="250px" alt text="Indigenous Peoples Resilience Fund's logo featuring topographic line drawings of a mountain range and the moon rising above within a circle">
+    <h1 id="title"> IPRF Team Lead - Operations & Systems</h1>
+<p id="description">Noal Amir's application work example</p>
+<form id="intake-form">
+  <fieldset>
+    <label for="question-1">1. Project Description. Please describe the challenge that COVID-19 has brought to your community and your response. (Please add in what, if anything, you have done so far and if you have partners.) *<textarea id="question-1" rows="3" cols="30" required ></textarea>
+  </fieldset>
+  <fieldset>
+    <label for="question-2"><p>2. What type of group are you? *</p>
+      <div class="wrapper-class">
+      <input type="radio" class="radio" name="type_of_group" value="1"/>
+      <label for="type_of_group">Registered charity</label>
+      <label for="type_of_group">
+      <input type="radio" class="radio" name="type_of_group" value="2"/>
+       Registered nonprofit
+      </label>
+      <label for="type_of_group">
+      <input type="radio" class="radio" name="type_of_group" value="3"/>
+       Other</label> 
+      <textarea id="question-2" rows="3" cols="30" placeholder="If other, please describe"></textarea> 
+      <div class="help">
+        <em><p>("Other" might be a community group, collective etc). Applicants must have a bank account in their
+        organization’s names.</p></em>
+        </div>
+        </label>
+  </fieldset>
+  <fieldset>
+    <label for="question-3">3. Are you partnering with another group that is a registered charity? *
+    </label>
+    <select name="question-3" id="question-3">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+      <option value="not-sure">Not sure</option>
+</select>
+        <div class="help">
+          A registered charity (qualified donee) is an organization that can issue official donation receipts for gifts it receives from individuals and corporations.
+            </div>
+  </fieldset>
+  <fieldset>
+    <label for="question-4">4. Is your group/organization Indigenous-led (meaning are decisions and direction provided by Indigenous peoples at all levels in your group/organization)? Please share how decisions are made. * </label> 
+    <textarea id="question-2" rows="3" cols="30"></textarea>
+      <div class="help">
+        700 words maximum
+      </div>
+  </fieldset>
+  <fieldset>
+    <label for="question-5">5. Is your community currently experiencing a COVID-19 challenge? *</label>
+    <select name="question-5" id="question-5">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+      </select>
+  </fieldset>
+  <fieldset>
+    <label for="question-6">6. Do you want to share more information about any COVID-19 challenge your community has faced?</label>
+    <textarea id="question-2" rows="3" cols="30" placeholder="Please describe"></textarea>
+  </fieldset>
+  <fieldset>
+    <label for="question-7">7. Is this an urgent social-economical or medical need? *</label>
+    <select name="question-7" id="question-7">
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+      </select>
+  </fieldset>
+  <fieldset>
+    <label for="question-8">8. Is there anything else you would like to tell us about this challenge or your response?</label>
+    <textarea id="question-2" rows="3" cols="30"></textarea>
+    <div class="help">
+      700 words maximum
+    </div>
+  </fieldset>
+  <fieldset>
+    <p>Project Timeline</p><label for="question-9">9. Please provide a start date.*</label> <input id="question-9" /></label> 
+    <div class="help">
+      yyyy-MM-DD
+      </div>
+  </fieldset>
+  <fieldset>
+    <label for="question-10">10. Please provide the end date. (Project must be completed within 1 year of application). *<input id="question-10" /></label> 
+    <div class="help">
+      yyyy-MM-DD
+      </div>
+  </fieldset>
+  <fieldset>
+    <label for="question-11">11. Optional: please share more about your project timeline:</label>
+    <textarea id="question-2" rows="3" cols="30"></textarea> 
+  </fieldset>
+  <fieldset>
+    <label for="question-12"></label>12. Budget<br><br>When filling this out please think about how the budget relates to the work you will be doing, for example: what is the duration for the initiative, how are you going to use the funds, what do you need to purchase, and are you paying people (example: salaries or honorariums).<br> Please refer to the Applicant Guide for information on eligible expenses.<br><br> Budget Request Template</fieldset>
+  <table>
+    <tr>
+    <th>Amount</th>
+    <th>Need</th>
+    <th>Description of expense</th>
+    <th>Duration</th>
+    </tr>
+    <tr>
+      <td>Ex: $1000</td>
+      <td>Ex. Salaries, seeds</td>
+      <td>Ex. Salaries for 2 people; non-GMO seeds for spring planting</td>
+      <td>Ex: 2 weeks (mid to end of June)</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                </tr>
+  </table>
+  <div id="contact">
+    <fieldset>
+  <label for="question-13">13. Total budget requested</label>
+    <input id="total-budget" type="number" required placeholder="Total amount">
+    </fieldset>
+    <fieldset>
+      <label id="question-14">14. Organization Contact Information</label>
+      <label for="organization-name">Organization Name</label>
+      <input id="organization-name" type="text">
+      <label for="first-name">First Name</label>
+      <input id="first-name" type="text">
+      <label for="last-name">Last Name</label>
+      <input id="last-name" type="text">
+      <label for="email">Email</label>
+      <input id="email" type="text">
+      <label for="phone">Phone</label>
+      <input id="phone" type="number">
+      <label for="address">Address</label>
+      <input id="address" type="address">
+  </fieldset>
+</div>
+
    <input id="submit" type="submit">
+   </body>
+   
